@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#04111f">
+  <meta name="description" content="NetFree helps you find legitimate public Wi-Fi, official operator offers, and network troubleshooting guidance.">
+  <title>NetFree | Free Internet Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <a class="brand" href="#home" aria-label="NetFree home"><span class="brand-mark">◉</span> Net<span>Free</span></a>
+      <button class="icon-btn" id="settingsBtn" aria-label="Settings">⚙</button>
+    </header>
+
+    <main>
+      <section class="screen active" id="home">
+        <div class="hero-card">
+          <div class="signal-logo" aria-hidden="true"><span>◉</span><i></i></div>
+          <p class="eyebrow">SMARTER CONNECTIONS</p>
+          <h1>Find free internet.<br><span>Stay connected.</span></h1>
+          <p class="muted">Discover legitimate public Wi-Fi, check official promotions, and troubleshoot your connection.</p>
+          <button class="primary-btn" data-go="wifi">Find free Wi-Fi <span>→</span></button>
+        </div>
+
+        <div class="status-card">
+          <div class="status-icon">⌁</div>
+          <div class="status-copy"><strong id="connectionTitle">Internet check available</strong><p id="connectionText">Run a quick test to check browser connectivity.</p></div>
+          <span class="status-dot"></span>
+        </div>
+
+        <h2>Quick access</h2>
+        <div class="feature-grid">
+          <button class="feature-card green" data-go="wifi"><span class="feature-icon">◉</span><strong>Free Wi-Fi</strong><small>Find trusted places</small></button>
+          <button class="feature-card blue" data-go="offers"><span class="feature-icon">♧</span><strong>Operator offers</strong><small>Official links only</small></button>
+          <button class="feature-card cyan" data-go="guide"><span class="feature-icon">▯</span><strong>iPhone guide</strong><small>Connection help</small></button>
+          <button class="feature-card amber" data-go="tools"><span class="feature-icon">⌁</span><strong>Network tools</strong><small>Test connectivity</small></button>
+        </div>
+        <div class="notice"><span>ⓘ</span><p>NetFree does not create mobile data or bypass carrier billing. Free access depends on a real hotspot or an eligible official offer.</p></div>
+      </section>
+
+      <section class="screen" id="wifi">
+        <div class="page-heading"><button class="back-btn" data-go="home">‹</button><div><p class="eyebrow">CONNECT SAFELY</p><h1>Free Wi-Fi Finder</h1></div></div>
+        <div class="intro-card"><span class="big-icon">◉</span><div><strong>Look for public hotspots</strong><p>Choose a location type below. Availability and access rules vary by venue.</p></div></div>
+        <label class="field-label" for="citySelect">Area in Saudi Arabia</label>
+        <select id="citySelect" class="select-field">
+          <option>Hafar Al Batin</option><option>Dammam</option><option>Riyadh</option><option>Jeddah</option><option>Khobar</option><option>Other area</option>
+        </select>
+        <div class="filter-row" id="placeFilters">
+          <button class="chip active" data-filter="All">All</button><button class="chip" data-filter="Transport">Transport</button><button class="chip" data-filter="Shopping">Shopping</button><button class="chip" data-filter="Cafe">Cafés</button><button class="chip" data-filter="Public">Public spaces</button>
+        </div>
+        <div id="wifiList" class="stack-list"></div>
+        <p class="small muted">These are suggested venue types, not live-verified hotspot listings. Confirm Wi-Fi availability with the venue before travelling.</p>
+      </section>
+
+      <section class="screen" id="offers">
+        <div class="page-heading"><button class="back-btn" data-go="home">‹</button><div><p class="eyebrow">CHECK ELIGIBILITY</p><h1>Operator offers</h1></div></div>
+        <div class="notice blue-notice"><span>✓</span><p>Open your operator's official website to check current promotions. Offer eligibility, prices and limits can change.</p></div>
+        <div class="operator-list">
+          <a class="operator-card" href="https://www.stc.com.sa/" target="_blank" rel="noopener"><span class="operator-logo stc">stc</span><span><strong>STC Saudi Arabia</strong><small>Official plans and promotions</small></span><b>↗</b></a>
+          <a class="operator-card" href="https://www.mobily.com.sa/" target="_blank" rel="noopener"><span class="operator-logo mobily">m</span><span><strong>Mobily</strong><small>Official plans and promotions</small></span><b>↗</b></a>
+          <a class="operator-card" href="https://www.sa.zain.com/" target="_blank" rel="noopener"><span class="operator-logo zain">z</span><span><strong>Zain KSA</strong><small>Official plans and promotions</small></span><b>↗</b></a>
+          <a class="operator-card" href="https://www.friendi.com.sa/" target="_blank" rel="noopener"><span class="operator-logo friendi">f</span><span><strong>Friendi Mobile</strong><small>Check available offers</small></span><b>↗</b></a>
+          <a class="operator-card" href="https://virginmobile.sa/" target="_blank" rel="noopener"><span class="operator-logo virgin">v</span><span><strong>Virgin Mobile KSA</strong><small>Check available offers</small></span><b>↗</b></a>
+        </div>
+        <div class="notice"><span>!</span><p>NetFree does not claim these operators currently offer free unlimited data. Always read the official terms before activating a promotion.</p></div>
+      </section>
+
+      <section class="screen" id="guide">
+        <div class="page-heading"><button class="back-btn" data-go="home">‹</button><div><p class="eyebrow">IPHONE HELP</p><h1>Connection guide</h1></div></div>
+        <div class="intro-card"><span class="big-icon phone-icon">▯</span><div><strong>Connect to public Wi-Fi</strong><p>Use these steps when a trusted venue offers Wi-Fi.</p></div></div>
+        <ol class="steps">
+          <li><span>1</span><div><strong>Open Settings</strong><p>On your iPhone, open <b>Settings → Wi-Fi</b>.</p></div></li>
+          <li><span>2</span><div><strong>Choose the venue network</strong><p>Confirm the exact network name with staff. Avoid look-alike networks.</p></div></li>
+          <li><span>3</span><div><strong>Complete sign-in if required</strong><p>If a captive portal appears, follow the venue's official instructions. Never enter banking passwords into a Wi-Fi sign-in page.</p></div></li>
+          <li><span>4</span><div><strong>Disconnect when finished</strong><p>Turn off auto-join for public networks you do not use regularly.</p></div></li>
+        </ol>
+        <div class="notice"><span>♢</span><p>A VPN can protect traffic on some networks, but it does not provide internet access by itself or remove mobile data charges.</p></div>
+      </section>
+
+      <section class="screen" id="tools">
+        <div class="page-heading"><button class="back-btn" data-go="home">‹</button><div><p class="eyebrow">BASIC CHECKS</p><h1>Network diagnostics</h1></div></div>
+        <div class="diagnostic-card">
+          <div id="testIcon" class="test-icon">⌁</div>
+          <h2 id="testTitle">Ready to test</h2>
+          <p id="testMessage">Check whether this browser can reach a public endpoint.</p>
+          <button class="primary-btn" id="runTestBtn">Run connectivity test</button>
+          <p class="small muted">This is a basic reachability test, not a precise speed test. Results depend on your connection and browser.</p>
+        </div>
+        <div class="tool-row"><span>Browser</span><strong id="browserStatus">Checking…</strong></div>
+        <div class="tool-row"><span>Connection API</span><strong id="connectionApi">Not exposed by browser</strong></div>
+        <div class="notice"><span>ⓘ</span><p>For accurate download speed, use a trusted speed-test service. This app does not collect your browsing activity.</p></div>
+      </section>
+
+      <section class="screen" id="settings">
+        <div class="page-heading"><button class="back-btn" data-go="home">‹</button><div><p class="eyebrow">PREFERENCES</p><h1>Settings</h1></div></div>
+        <div class="settings-card">
+          <div class="setting-row"><span>Country</span><strong>Saudi Arabia</strong></div>
+          <div class="setting-row"><span>Theme</span><strong>Dark</strong></div>
+          <button class="setting-row full" id="privacyBtn"><span>Privacy and safety</span><b>›</b></button>
+          <button class="setting-row full" id="aboutBtn"><span>About NetFree</span><b>›</b></button>
+        </div>
+        <div class="notice"><span>✓</span><p>NetFree is a guidance tool. It does not connect to carrier systems, collect passwords, or guarantee free internet.</p></div>
+        <p class="version">NetFree Web App · Demo version 1.0</p>
+      </section>
+
+      <section class="screen" id="info">
+        <div class="page-heading"><button class="back-btn" data-go="settings">‹</button><div><p class="eyebrow">YOUR SAFETY</p><h1 id="infoTitle">About NetFree</h1></div></div>
+        <div class="intro-card"><span class="big-icon">✓</span><div><strong>Honest, privacy-first guidance</strong><p id="infoText">NetFree helps you find legitimate connectivity options.</p></div></div>
+        <ul class="safe-list"><li>✓ No fake connection status</li><li>✓ No collection of passwords</li><li>✓ No promise of unlimited free mobile data</li><li>✓ Official operator websites for promotions</li></ul>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="nav-item active" data-go="home"><span>⌂</span><small>Home</small></button>
+      <button class="nav-item" data-go="offers"><span>♧</span><small>Offers</small></button>
+      <button class="nav-item" data-go="wifi"><span>◉</span><small>Wi-Fi</small></button>
+      <button class="nav-item" data-go="tools"><span>⌁</span><small>Tools</small></button>
+    </nav>
+  </div>
+  <div id="toast" role="status" aria-live="polite" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
